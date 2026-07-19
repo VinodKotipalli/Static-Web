@@ -1,398 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Cloud Platform</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-
-background:linear-gradient(-45deg,#071739,#0f3460,#16213e,#1f4068);
-background-size:400% 400%;
-animation:bg 12s ease infinite;
-color:white;
-overflow-x:hidden;
-
-}
-
-@keyframes bg{
-
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-
-}
-
-header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 10%;
-
-}
-
-.logo{
-
-font-size:28px;
-font-weight:bold;
-color:#00e5ff;
-
-}
-
-nav a{
-
-color:white;
-text-decoration:none;
-margin-left:30px;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:#00e5ff;
-
-}
-
-.hero{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px 10%;
-min-height:90vh;
-
-}
-
-.left{
-
-width:50%;
-
-}
-
-.left h1{
-
-font-size:60px;
-line-height:1.2;
-
-}
-
-.left span{
-
-color:#00e5ff;
-
-}
-
-.left p{
-
-margin:25px 0;
-font-size:18px;
-line-height:1.8;
-color:#d4d4d4;
-
-}
-
-.btn{
-
-display:inline-block;
-padding:16px 40px;
-background:#00e5ff;
-color:black;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-transition:.4s;
-
-}
-
-.btn:hover{
-
-transform:translateY(-5px);
-box-shadow:0 0 25px cyan;
-
-}
-
-.right{
-
-width:40%;
-display:flex;
-justify-content:center;
-
-}
-
-.card{
-
-width:380px;
-padding:35px;
-background:rgba(255,255,255,.08);
-border-radius:25px;
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.2);
-box-shadow:0 15px 40px rgba(0,0,0,.3);
-
-}
-
-.circle{
-
-width:120px;
-height:120px;
-border-radius:50%;
-margin:auto;
-background:linear-gradient(135deg,#00e5ff,#00bcd4,#4facfe);
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:55px;
-margin-bottom:25px;
-animation:float 3s infinite ease-in-out;
-
-}
-
-@keyframes float{
-
-50%{
-transform:translateY(-15px);
-}
-
-}
-
-.status{
-
-display:flex;
-justify-content:space-between;
-margin-top:20px;
-
-}
-
-.box{
-
-background:rgba(255,255,255,.07);
-padding:18px;
-border-radius:15px;
-text-align:center;
-width:48%;
-
-}
-
-.features{
-
-padding:80px 10%;
-
-}
-
-.title{
-
-text-align:center;
-font-size:40px;
-margin-bottom:60px;
-
-}
-
-.grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-
-}
-
-.feature{
-
-background:rgba(255,255,255,.08);
-padding:35px;
-border-radius:20px;
-transition:.4s;
-backdrop-filter:blur(10px);
-
-}
-
-.feature:hover{
-
-transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,229,255,.3);
-
-}
-
-.feature h3{
-
-margin:20px 0;
-
-}
-
-footer{
-
-padding:30px;
-text-align:center;
-color:#bbb;
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saivinod Kotipalli | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --primary-color: #38bdf8;
+            --secondary-color: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+        }
+
+        .role {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: var(--surface-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--surface-color);
+            color: var(--text-muted);
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .experience-header { flex-direction: column; }
+            nav ul { display: none; /* In a real app, add a hamburger menu */ }
+        }
+    </style>
 </head>
 <body>
 
-<header>
+    <nav>
+        <div class="logo">SK.</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<div class="logo">AI Cloud</div>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Saivinod Kotipalli</h1>
+            <h2>Professional & Dedicated Innovator</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Welcome to my portfolio. I specialize in driving technical excellence, building modern solutions, and creating value through efficient workflows.
+            </p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </header>
 
-<nav>
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="glass-card">
+            <p>I am a passionate professional with a strong track record of success in my field. I am constantly looking to learn new technologies and improve my workflow. My experience on LinkedIn highlights my dedication to teamwork, problem-solving, and continuous growth.</p>
+            <br>
+            <p><em>(Replace this text with a specific summary of your background, education, and passions.)</em></p>
+        </div>
+    </section>
 
-<a href="#">Home</a>
-<a href="#">Features</a>
-<a href="#">Services</a>
-<a href="#">Dashboard</a>
-<a href="#">Contact</a>
+    <section id="experience">
+        <h2 class="section-title">Experience & Projects</h2>
+        <div class="timeline">
+            <!-- Experience 1 -->
+            <div class="glass-card">
+                <div class="experience-header">
+                    <div>
+                        <div class="role">Current/Most Recent Job Title</div>
+                        <div style="color: var(--text-main)">Company Name</div>
+                    </div>
+                    <div class="date">Month 20XX - Present</div>
+                </div>
+                <ul style="margin-left: 20px; color: var(--text-muted);">
+                    <li>Key achievement or responsibility showcasing your impact.</li>
+                    <li>Developed or optimized a specific process/technology.</li>
+                    <li>Collaborated with cross-functional teams to deliver projects on time.</li>
+                </ul>
+            </div>
 
-</nav>
+            <!-- Experience 2 -->
+            <div class="glass-card">
+                <div class="experience-header">
+                    <div>
+                        <div class="role">Previous Job Title</div>
+                        <div style="color: var(--text-main)">Previous Company Name</div>
+                    </div>
+                    <div class="date">Month 20XX - Month 20XX</div>
+                </div>
+                <ul style="margin-left: 20px; color: var(--text-muted);">
+                    <li>Describe another major project or role here.</li>
+                    <li>Quantify your results (e.g., "Improved efficiency by 20%").</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-</header>
+    <section id="skills">
+        <h2 class="section-title">Core Skills</h2>
+        <div class="skills-container">
+            <div class="skill-tag">Project Management</div>
+            <div class="skill-tag">Software Development</div>
+            <div class="skill-tag">Data Analysis</div>
+            <div class="skill-tag">Problem Solving</div>
+            <div class="skill-tag">Team Leadership</div>
+            <div class="skill-tag">Agile Methodologies</div>
+            <div class="skill-tag">UI/UX Design</div>
+            <div class="skill-tag">Communication</div>
+            <!-- Add more skills based on your actual LinkedIn profile -->
+        </div>
+    </section>
 
-<section class="hero">
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="glass-card" style="text-align: center;">
+            <p style="margin-bottom: 2rem;">I'm currently open for new opportunities and collaborations. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            
+            <a href="https://www.linkedin.com/in/saivinod-kotipalli-960aa61a0" target="_blank" class="btn" style="background: #0077b5;">
+                View my LinkedIn
+            </a>
+            <a href="mailto:your.email@example.com" class="btn" style="margin-left: 1rem;">
+                Email Me
+            </a>
+        </div>
+    </section>
 
-<div class="left">
-
-<h1>Build the Future with <span>Artificial Intelligence</span></h1>
-
-<p>
-
-Experience next-generation cloud automation, machine learning,
-predictive analytics, and intelligent infrastructure designed
-for modern enterprises.
-
-</p>
-
-<a href="#" class="btn">Explore AI</a>
-
-</div>
-
-<div class="right">
-
-<div class="card">
-
-<div class="circle">
-🤖
-</div>
-
-<h2 align="center">AI Assistant</h2>
-
-<p align="center">
-Real-time automation powered by Machine Learning
-</p>
-
-<div class="status">
-
-<div class="box">
-
-<h2>99.9%</h2>
-
-<p>Uptime</p>
-
-</div>
-
-<div class="box">
-
-<h2>24/7</h2>
-
-<p>AI Support</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="features">
-
-<h2 class="title">AI Platform Features</h2>
-
-<div class="grid">
-
-<div class="feature">
-
-<h3>🧠 Machine Learning</h3>
-
-<p>
-Deploy intelligent AI models with high-performance computing.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>☁ Cloud Infrastructure</h3>
-
-<p>
-Scalable cloud platform powered by automation and security.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>📊 AI Analytics</h3>
-
-<p>
-Gain deep business insights using predictive analytics.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>🔐 Cyber Security</h3>
-
-<p>
-Enterprise-grade AI-powered threat detection and monitoring.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>⚡ Automation</h3>
-
-<p>
-Automate deployments, monitoring, and infrastructure operations.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>🌐 Global Scale</h3>
-
-<p>
-Deliver AI services worldwide with ultra-low latency.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 AI Cloud Platform | Powered by Artificial Intelligence
-
-</footer>
+    <footer>
+        <p>&copy; 2026 Saivinod Kotipalli. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
