@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Cloud Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(-45deg,#071739,#0f3460,#16213e,#1f4068);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:white;
+overflow-x:hidden;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 10%;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:bold;
+color:#00e5ff;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:30px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#00e5ff;
+
+}
+
+.hero{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 10%;
+min-height:90vh;
+
+}
+
+.left{
+
+width:50%;
+
+}
+
+.left h1{
+
+font-size:60px;
+line-height:1.2;
+
+}
+
+.left span{
+
+color:#00e5ff;
+
+}
+
+.left p{
+
+margin:25px 0;
+font-size:18px;
+line-height:1.8;
+color:#d4d4d4;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:16px 40px;
+background:#00e5ff;
+color:black;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+box-shadow:0 0 25px cyan;
+
+}
+
+.right{
+
+width:40%;
+display:flex;
+justify-content:center;
+
+}
+
+.card{
+
+width:380px;
+padding:35px;
+background:rgba(255,255,255,.08);
+border-radius:25px;
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.2);
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+}
+
+.circle{
+
+width:120px;
+height:120px;
+border-radius:50%;
+margin:auto;
+background:linear-gradient(135deg,#00e5ff,#00bcd4,#4facfe);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:55px;
+margin-bottom:25px;
+animation:float 3s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.status{
+
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+
+}
+
+.box{
+
+background:rgba(255,255,255,.07);
+padding:18px;
+border-radius:15px;
+text-align:center;
+width:48%;
+
+}
+
+.features{
+
+padding:80px 10%;
+
+}
+
+.title{
+
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.feature{
+
+background:rgba(255,255,255,.08);
+padding:35px;
+border-radius:20px;
+transition:.4s;
+backdrop-filter:blur(10px);
+
+}
+
+.feature:hover{
+
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,229,255,.3);
+
+}
+
+.feature h3{
+
+margin:20px 0;
+
+}
+
+footer{
+
+padding:30px;
+text-align:center;
+color:#bbb;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">AI Cloud</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">Services</a>
+<a href="#">Dashboard</a>
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="left">
+
+<h1>Build the Future with <span>Artificial Intelligence</span></h1>
+
+<p>
+
+Experience next-generation cloud automation, machine learning,
+predictive analytics, and intelligent infrastructure designed
+for modern enterprises.
+
+</p>
+
+<a href="#" class="btn">Explore AI</a>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<div class="circle">
+🤖
+</div>
+
+<h2 align="center">AI Assistant</h2>
+
+<p align="center">
+Real-time automation powered by Machine Learning
+</p>
+
+<div class="status">
+
+<div class="box">
+
+<h2>99.9%</h2>
+
+<p>Uptime</p>
+
+</div>
+
+<div class="box">
+
+<h2>24/7</h2>
+
+<p>AI Support</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2 class="title">AI Platform Features</h2>
+
+<div class="grid">
+
+<div class="feature">
+
+<h3>🧠 Machine Learning</h3>
+
+<p>
+Deploy intelligent AI models with high-performance computing.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>☁ Cloud Infrastructure</h3>
+
+<p>
+Scalable cloud platform powered by automation and security.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>📊 AI Analytics</h3>
+
+<p>
+Gain deep business insights using predictive analytics.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🔐 Cyber Security</h3>
+
+<p>
+Enterprise-grade AI-powered threat detection and monitoring.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>⚡ Automation</h3>
+
+<p>
+Automate deployments, monitoring, and infrastructure operations.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🌐 Global Scale</h3>
+
+<p>
+Deliver AI services worldwide with ultra-low latency.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 AI Cloud Platform | Powered by Artificial Intelligence
+
+</footer>
+
+</body>
+</html>
